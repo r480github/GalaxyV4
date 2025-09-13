@@ -9,6 +9,11 @@ const [app, listen] = new ChemicalServer({
 });
 const port = process.env.PORT || 3000;
 
+// --- Allow Caddy to issue TLS for all domains ---
+app.get("/allow", (req, res) => {
+  res.sendStatus(200); // allow all domains
+});
+
 app.use(express.static("public", {
     index: "index.html",
     extensions: ["html"]
