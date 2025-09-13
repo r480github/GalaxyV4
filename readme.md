@@ -4,7 +4,7 @@
 
 ## About Galaxy📑
 
-Galaxy is a minimalistic open source proxy that is capable of evading internet censorship. Galaxy uses Chemical.JS, which is harder to detect and fast. It also contains a vast collection of games that will continuously expand as the site grows. Join [Falcon Networks](https://discord.gg/xM8FvSAttG) for more links!
+Galaxy is a minimalistic open source proxy that is capable of evading internet censorship. Galaxy uses Chemical.JS, which is harder to detect and fast. It also contains a vast collection of games that will continuously expand as the site grows. Join [Hydra Network](https://discord.gg/Dvh2veTWU4) for more links!
 
 
 ## Demo 🏴󠁺󠁡󠁦󠁳󠁿
