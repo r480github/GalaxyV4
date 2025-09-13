@@ -10,8 +10,8 @@
   "dependencies": {
     "@swup/head-plugin": "^2.3.1",
     "chemicaljs": "^2.6.4",
+    "eruda": "^3.4.1",
     "express": "^4.21.2",
-    "swup": "^4.8.1",
-    "eruda": "^3.4.1"
+    "swup": "^4.8.1"
   }
 }
