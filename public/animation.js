@@ -67,15 +67,16 @@ gsap.fromTo(
   }
 );
 gsap.fromTo(
-  ".feature-card", {
+  ".feature-card",
+  {
     y: 50,
-    opacity: 0,   
+    opacity: 0,
   },
   {
     y: 0,
     opacity: 1,
     stagger: 0.1,
     duration: 0.5,
-    delay: 0.2
+    delay: 0.2,
   }
-)
+);
