@@ -158,6 +158,23 @@
         </div>
       </section>
 
+      <div class="bottombtns">
+        <div class="ab" onclick="chemical.aboutBlank('index.html')">
+          Op<span class="filler">FILLER</span>en Abo<span class="filler"
+            >FILLER</span
+          >ut:Bla<span class="filler">FILLER</span>nk
+        </div>
+        <div class="ab" onclick="hardreload()">Clear Cache</div>
+        <script>
+          function hardreload() {
+            window.location.href =
+              window.location.origin +
+              window.location.pathname +
+              "?nocache=" +
+              new Date().getTime();
+          }
+        </script>
+      </div>
 
     </main>
   </body>
