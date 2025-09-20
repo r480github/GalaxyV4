@@ -112,6 +112,31 @@
           &#83;&#117;&#114;&#102;&#32;&#116;&#104;&#101;&#32;&#71;&#97;&#108;&#97;&#120;&#121;&#32;&#119;&#105;&#116;&#104;&#32;&#110;&#111;&#32;&#108;&#105;&#109;&#105;&#116;&#115;&#46;&#46;&#46;
         </h3>
       </div>
+      <input
+        spellcheck="false"
+        autocomplete="off"
+        id="search"
+        data-frame="web"
+        data-auto-https
+        data-search-engine="https://search.brave.com/search?q=%s"
+        placeholder="Search or Enter a URL"
+        is="chemical-input"
+        data-service="scramjet"
+      />
+      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+
+      <section id="controls" is="chemical-controls">
+        <button onclick="chemical.componentAction('back', 'web')">Back</button>
+        <button onclick="chemical.componentAction('forward', 'web')">
+          Forward
+        </button>
+        <button onclick="chemical.componentAction('reload', 'web')">
+          Reload
+        </button>
+        <button onclick="chemical.componentAction('close', 'web')">
+          Close
+        </button>
+      </section>
 
       <section class="features">
         <div class="features-grid">
@@ -186,32 +211,58 @@
         };
       </script>
       
-      <input
-        spellcheck="false"
-        autocomplete="off"
-        id="search"
-        data-frame="web"
-        data-auto-https
-        data-search-engine="https://search.brave.com/search?q=%s"
-        placeholder="Search or Enter a URL"
-        is="chemical-input"
-        data-service="scramjet"
-      />
-      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
-
-      <section id="controls" is="chemical-controls">
-        <button onclick="chemical.componentAction('back', 'web')">Back</button>
-        <button onclick="chemical.componentAction('forward', 'web')">
-          Forward
-        </button>
-        <button onclick="chemical.componentAction('reload', 'web')">
-          Reload
-        </button>
-        <button onclick="chemical.componentAction('close', 'web')">
-          Close
-        </button>
-      </section>
     </main>
+        <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="/global/js/jquery.scroll-with-ease.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("html").scrollWithEase();
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+      <script
+        type="text/javascript"
+        src="//drakerecitalpraised.com/7a19197f5a90cb5b4366c1693906600d/invoke.js"
+      ></script>
+
+    <script
+      type="text/javascript"
+      src="//drakerecitalpraised.com/ce/95/15/ce9515d42948629e2e68c67fa37391e6.js"
+    ></script>
+
+
+
+
+
+
+
+
+    
+    <script>
+      function inspect() {
+        var script = document.createElement("script");
+        script.src = "/global/js/eruda.js";
+        document.body.append(script);
+        script.onload = function () {
+          eruda.init();
+        };
+      }
+      inspect();
+    </script>
+
+
+
+
   </body>
 
 </html>
