@@ -74,29 +74,5 @@
     gtag("config", "G-MXG0KPC43X");
   </script>
   <body onload="checkBrowser()">
-      <input
-        spellcheck="false"
-        autocomplete="off"
-        id="search"
-        data-frame="web"
-        data-auto-https
-        data-search-engine="https://search.brave.com/search?q=%s"
-        placeholder="Search or Enter a URL"
-        is="chemical-input"
-        data-service="scramjet"
-      />
-      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
-      <section id="controls" is="chemical-controls">
-        <button onclick="chemical.componentAction('back', 'web')">Back</button>
-        <button onclick="chemical.componentAction('forward', 'web')">
-          Forward
-        </button>
-        <button onclick="chemical.componentAction('reload', 'web')">
-          Reload
-        </button>
-        <button onclick="chemical.componentAction('close', 'web')">
-          Close
-        </button>
-      </section>
   </body>
 </html>
