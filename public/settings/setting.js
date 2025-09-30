@@ -21,7 +21,7 @@ function ABCloak(redirectToEducationalSite) {
           "faviconInputValue" || "https://ssl.gstatic.com/classroom/favicon.png"
         );
         const savedTitle =
-          localStorage.getItem("tabInputValue") || "Google Classroom"; // Default if empty
+          localStorage.getItem("tabInputValue") || "Google Classroom";
 
         var name = savedTitle;
         var icon = savedFavicon;
@@ -81,7 +81,7 @@ function ABCloak(redirectToEducationalSite) {
   }
 }
 
-if (localStorage.getItem("autoAB") == "true") {
+if (localStorage.getItem("autoAB") == "true") { //bruh ts pmo I'm never doing somethign like this again
   ABCloak(true);
 }
 function checkPopupsBlocked() {
@@ -98,22 +98,16 @@ function checkPopupsBlocked() {
   }
 }
 function tabpresets(title, faviconURL) {
-  // Change the website's title
   document.title = title;
-
-  // Change the favicon
   const link =
     document.querySelector("link[rel~='icon']") ||
     document.createElement("link");
   link.rel = "icon";
-  link.href = faviconURL; // Use the parameter directly
+  link.href = faviconURL;
   document.head.appendChild(link);
-
-  // Store values in localStorage
   localStorage.setItem("tabInputValue", title);
   localStorage.setItem("faviconInputValue", faviconURL);
 }
-// Function to update favicon and store it in localStorage
 function updateFaviconFromInput() {
   const input = document.getElementById("favicon");
   if (input) {
@@ -125,29 +119,23 @@ function updateFaviconFromInput() {
       link.rel = "icon";
       link.href = faviconUrl;
       document.head.appendChild(link);
-
-      // Store value in localStorage
       localStorage.setItem("faviconInputValue", faviconUrl);
     }
   }
 }
 
-// Function to update tab title and store it in localStorage
 function updateTitleFromInput() {
   const input = document.getElementById("tabname");
   if (input) {
-    const newTitle = input.value.trim() || "GalaxyV4"; // Default to GalaxyV4 if empty
+    const newTitle = input.value.trim() || "GalaxyV4";
     document.title = newTitle;
-
-    // Store value in localStorage
     localStorage.setItem("tabInputValue", newTitle);
   }
 }
 
-// Load saved values on page load
 document.addEventListener("DOMContentLoaded", () => {
   const savedFavicon = localStorage.getItem("faviconInputValue");
-  const savedTitle = localStorage.getItem("tabInputValue") || "GalaxyV4"; // Default if empty
+  const savedTitle = localStorage.getItem("tabInputValue") || "GalaxyV4";
 
   if (savedFavicon) {
     const link =
@@ -163,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Attach event listeners
 document
   .getElementById("favicon")
   ?.addEventListener("input", updateFaviconFromInput);
@@ -176,14 +163,14 @@ function checkBrowser() {
     document.querySelector(".gradient-container").style.display = "none";
   }
 }
-checkBrowser()
-function launchBlob() {
+checkBrowser();
+function launchBlob() { //yo I'm actually so smart for this
   const currentSiteUrl = window.location.href + "?redirect=true";
 
   const htmlContent = `
     <html>
       <head>
-        <title>Space</title>
+        <title>Galaxy</title>
         <style>
           body,
           html {
