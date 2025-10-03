@@ -644,7 +644,7 @@ label a,
 
 /* SETTING CSS */
 .settingmain {
-  height: 200vh;
+  height: 500vh;
 }
 #tabname::placeholder,
 #favicon::placeholder {
@@ -819,8 +819,10 @@ button:hover {
   padding: 20px;
 }
 .footer {
-  position: absolute;
-  bottom: -900px;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 768px) {
   .settingTitle {
