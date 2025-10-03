@@ -1,99 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script src="/global/js/jquery.scroll-with-ease.js"></script>
-  <body data-new-gr-c-s-check-loaded="14.1120.1" data-gr-ext-installed="">
-    <div class="box">
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgb(129, 129, 129)"></div>
-      <div class="item" style="background-color: rgb(0, 109, 128)"></div>
-      <div class="item" style="background-color: rgb(128, 105, 0)"></div>
-      <div class="item" style="background-color: rgb(70, 0, 128)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 32)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgba(128, 0, 53, 0.233)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgb(128, 0, 11)"></div>
-      <div class="item" style="background-color: rgb(126, 128, 0)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 85)"></div>
-      <div class="item" style="background-color: rgb(115, 128, 0)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 117)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 53)"></div>
-      <div class="item" style="background-color: rgb(55, 0, 128)"></div>
-      <div class="item" style="background-color: rgb(141, 96, 133)"></div>
-      <div class="item" style="background-color: rgba(38, 0, 128, 0.664)"></div>
-      <div
-        class="item"
-        style="background-color: rgba(212, 85, 202, 0.493)"
-      ></div>
-      <div class="item" style="background-color: rgb(0, 92, 128)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgb(129, 129, 129)"></div>
-      <div class="item" style="background-color: rgb(0, 109, 128)"></div>
-      <div class="item" style="background-color: rgb(128, 105, 0)"></div>
-      <div class="item" style="background-color: rgb(70, 0, 128)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 32)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgba(128, 0, 53, 0.233)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgb(128, 0, 11)"></div>
-      <div class="item" style="background-color: rgb(126, 128, 0)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 85)"></div>
-      <div class="item" style="background-color: rgb(115, 128, 0)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 117)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 53)"></div>
-      <div class="item" style="background-color: rgb(55, 0, 128)"></div>
-      <div class="item" style="background-color: rgb(141, 96, 133)"></div>
-      <div class="item" style="background-color: rgba(38, 0, 128, 0.664)"></div>
-      <div
-        class="item"
-        style="background-color: rgba(212, 85, 202, 0.493)"
-      ></div>
-      <div class="item" style="background-color: rgb(0, 92, 128)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgb(129, 129, 129)"></div>
-      <div class="item" style="background-color: rgb(0, 109, 128)"></div>
-      <div class="item" style="background-color: rgb(128, 105, 0)"></div>
-      <div class="item" style="background-color: rgb(70, 0, 128)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 32)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgba(128, 0, 53, 0.233)"></div>
-      <div class="item" style="background-color: green"></div>
-      <div class="item" style="background-color: rgb(128, 0, 11)"></div>
-      <div class="item" style="background-color: rgb(126, 128, 0)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 85)"></div>
-      <div class="item" style="background-color: rgb(115, 128, 0)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 117)"></div>
-      <div class="item" style="background-color: rgb(128, 0, 53)"></div>
-      <div class="item" style="background-color: rgb(55, 0, 128)"></div>
-      <div class="item" style="background-color: rgb(141, 96, 133)"></div>
-      <div class="item" style="background-color: rgba(38, 0, 128, 0.664)"></div>
-      <div
-        class="item"
-        style="background-color: rgba(212, 85, 202, 0.493)"
-      ></div>
-      <div class="item" style="background-color: rgb(0, 92, 128)"></div>
-    </div>
-    <script>
-      $(document).ready(function () {
-        $("html").scrollWithEase();
-      });
-    </script>
-
+    <meta charset="UTF-8" />
+    <title>Embedded Iframes with Safe Messaging & Status</title>
     <style>
-      .box {
+      :root {
+        --gap: 8px;
+        --card-bg: #f8f8f8;
+        --ok: #2e7d32;
+        --warn: #f57c00;
+        --bad: #c62828;
+        --muted: #666;
+      }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        padding: 12px;
+        background: #fff;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: var(--gap);
+      }
+      .card {
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
         display: flex;
         flex-direction: column;
+        gap: 6px;
+        min-height: 180px;
       }
-      .item {
-        height: 200px;
-        width: 100vw;
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+      }
+      a.site {
+        color: #0b61ff;
+        text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 140px;
+      }
+      .status {
+        font-size: 12px;
+        padding: 4px 6px;
+        border-radius: 6px;
+        color: #fff;
+      }
+      .status.loading {
+        background: var(--warn);
+      }
+      .status.loaded {
+        background: var(--ok);
+      }
+      .status.blocked {
+        background: var(--bad);
+      }
+      .status.nomsg {
+        background: #616161;
+      }
+      iframe {
+        width: 100%;
+        height: 120px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: white;
+      }
+      .controls {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+      button {
+        font-size: 12px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background: white;
+        cursor: pointer;
+      }
+      small.hint {
+        color: var(--muted);
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
       }
     </style>
+  </head>
+  <body>
+    <h2>Embedded Iframes — Safe embedding, messaging & status</h2>
+    <p class="hint">
+      This page demonstrates safe iframe embedding. It does
+      <strong>not</strong> bypass site frame-protection. If a site refuses to be
+      framed the page will detect that and show a status. Click the site name to
+      open it in a new tab.
+    </p>
+
+    <div id="grid"></div>
+
+    <script>
+      // ========== configuration ==========
+      const urls = [
+        "https://utag.bz",
+        "https://videoartfestival.ro",
+        "https://vivatrans.ru",
+        "https://vpn03.ru",
+        "https://wareznet.ro",
+        "https://accommodation-basel.ch",
+        "https://aeaeae.space",
+        "https://aonetitle.com",
+        "https://ariarafuse.com",
+        "https://arteclaraithurralde.com",
+        "https://artprofilingtool.com",
+        "https://asesoriatopografica.cl",
+        "https://axsetubal.pt",
+        "https://bensmeai.com",
+        "https://call103.ru",
+        "https://ceg2000.it",
+        "https://clan-todag.tk",
+        "https://coconutz.cc",
+        "https://daterchips.com",
+        "https://diagnosticoparasito.com.ar",
+        "https://flacktherapy.com",
+        "https://functorial.co",
+        "https://gadgetsha.co.za",
+        "https://giova.pro",
+        "https://hakon.info",
+        "https://ham-tetra.es",
+        "https://hunkargucu.com.tr",
+        "https://interteh.gq",
+        "https://kineticdissent.com",
+        "https://kiohome.xyz",
+        "https://kionom.biz",
+        "https://kionom.net",
+        "https://manderstrum.nl",
+        "https://mathitech.eu",
+        "https://mentealveare.it",
+        "https://mielimape.fi",
+        "https://mle-tech.com",
+        "https://mtu-mc.org",
+        "https://n9lz.com",
+        "https://pagangeek.co.uk",
+        "https://pegasone.com",
+        "https://pelisemby.xyz",
+        "https://pelleshus.se",
+        "https://robofuzz.com",
+        "https://scitzoe.com",
+        "https://simplyplumbinghvac.com",
+        "https://snafuu.ch",
+        "https://stalheim.net",
+        "https://sysengi.ru",
+        "https://the8woodcutter.sh",
+        "https://unixdir.net",
+        "https://wirtechorzug.ch",
+        "https://xn--ting-toa.se",
+        "https://alanboba.org",
+        "https://avia4u.ru",
+        "https://cloudketer.com.mx",
+        "https://clubnb.au",
+        "https://fizzreference.com",
+        "https://hyvelab.us",
+        "https://imageinsightvault.com",
+        "https://it-wiz.de",
+        "https://jenniferbedford.com",
+        "https://mypuppycam.net",
+        "https://nasx.tk",
+        "https://nel-chonnam.com",
+        "https://nylme.xyz",
+        "https://randallhenning.com",
+        "https://sgsarchitecture.com.tr",
+        "https://sumi34.ch",
+        "https://the-windows-expert.ca",
+        "https://cercamio.ar",
+        "https://cytdemo.com.ar",
+        "https://kaufmann.to",
+        "https://kiosspulsa.com",
+        "https://mskms.tk",
+        "https://tannerlis.ch",
+        "https://tasktoaster.com",
+        "https://tornotluk.in",
+        "https://truckradar.pro",
+        "https://tumorboard.org.np",
+        "https://urquhart.tv",
+        "https://verandaresidence.co.id",
+        "https://vgonzalez.cl",
+        "https://vipeanalytics.com",
+        "https://volkis.se",
+        "https://weaponizedwaifus.com",
+        "https://wildwestit.com",
+        "https://wirture.net",
+        "https://xinpujing-yulecheng.com",
+        "https://xinpujingyule123.com",
+        "https://xinpujingyule999.com",
+        "https://xn--ithjlp-eua.se",
+        "https://xyfyx.com",
+        "https://yahabibi.ro",
+        "https://yaishio.com",
+        "https://yihaoyule666.com",
+        "https://yinheyulechang123.com",
+        "https://yintaiyule.com",
+        "https://yredra.ch",
+        "https://zetete.com",
+        "https://1-0.com.tr",
+        "https://124489.xyz",
+        "https://20060620.xyz",
+        "https://28611111.cn",
+        "https://2a-1791.com",
+        "https://3030cc.net",
+        "https://5ysa.com",
+        "https://admion.sk",
+        "https://alobanbe.com",
+        "https://anchorage-local.ca",
+        "https://benorchard.com",
+        "https://betsycumplexv.com",
+        "https://bolboroace.ro",
+        "https://bumgun.club",
+        "https://clubnb.club",
+        "https://clubnb.org",
+        "https://colegioitalocomposto.cl",
+        "https://daniel-pastor.es",
+        "https://davidvalle.es",
+        "https://demers.name",
+        "https://deparra.cl",
+        "https://disconnexus.com",
+        "https://dranni.net",
+        "https://dumile.net",
+        "https://emilylewis.name",
+        "https://erkipehk.eu",
+        "https://facefur.com",
+        "https://fipscode.org",
+        "https://gigs2go.uk",
+        "https://greatfallscloud.com",
+        "https://hakons.info",
+        "https://ham-dmr.es",
+        "https://hjemmeki.no",
+        "https://hodlem.in",
+        "https://iiesu.ru",
+        "https://indotos.com",
+        "https://inet79.ru",
+        "https://interteh.cf",
+        "https://ithelena.com",
+        "https://itkalispell.com",
+        "https://itkingcounty.com",
+        "https://itprofdelo.ru",
+        "https://ittipsandtricks.com",
+        "https://j2sistemas.com.br",
+        "https://jeffspage.net",
+        "https://kelvineu-climatizacion.com",
+        "https://klimanovsky.com",
+        "https://knitido.cl",
+        "https://laptopfix.es",
+        "https://liljas.info",
+        "https://locoaventura.com",
+        "https://manggalaperkasa.com",
+        "https://marcarojo.com.ar",
+        "https://metrobeatrecords.com",
+        "https://nakoncertu.si",
+        "https://nyeste.info",
+        "https://oh6gzt.fi",
+        "https://paulmunn.net",
+        "https://paulonia.cl",
+        "https://peatsorb.cl",
+        "https://piter.xyz",
+        "https://pswrich.com",
+        "https://putratenagadesa.com",
+        "https://razvan.us",
+        "https://rixillo.net",
+        "https://robofuzzwrenches.com",
+        "https://satindica.com",
+        "https://sch-nice.com",
+        "https://solvexus.xyz",
+        "https://swdevelop.de",
+        "https://t3pclan.com",
+        "https://taramea.net",
+        "https://taylorpilotage.com",
+        "https://therecker.com",
+        "https://tienda-innovate.com",
+        "https://eflab.net",
+        "https://enttuth.org.np",
+        "https://esmax.pt",
+        "https://etnacoffee.eu",
+        "https://feichiyule.com",
+        "https://florentinatilea.ro",
+        "https://freude-macherei.ch",
+        "https://fujieda.net",
+        "https://galeriehametner.at",
+        "https://gatakx.com",
+        "https://gb-rijeka.hr",
+        "https://hampager.es",
+        "https://hermandadcristovaldeolmos.org",
+        "https://homegreen.se",
+        "https://homevpnit.com",
+        "https://houseline.co.za",
+        "https://huitcent.xyz",
+        "https://itauburn.com",
+        "https://itbigballs.com",
+        "https://itbigsky.com",
+        "https://itbozeman.com",
+        "https://itbutte.com",
+        "https://itcommonsense.com",
+        "https://itevenbetter.com",
+        "https://ithavre.com",
+        "https://ithjalp.com",
+        "https://ithjalp.se",
+        "https://ithomevpn.com",
+        "https://itmissoula.com",
+        "https://itnetlabs.com",
+        "https://itwildwest.com",
+        "https://jc.ar",
+        "https://jeangermain.cl",
+        "https://jessicaboasso.com",
+        "https://jianada28yule.com",
+        "https://jinbei-yule.com",
+        "https://joaoduarte.com.br",
+        "https://johngeorgeracing.com",
+        "https://jreg.net",
+        "https://jueri.ch",
+        "https://jw-io.com",
+        "https://kaishiyule123.com",
+        "https://kanalweg.ch",
+        "https://kelvineu-refrigeracion.com",
+        "https://kikadraws.com",
+        "https://lorenteortodonciazar.es",
+        "https://mabest.ch",
+        "https://mahollin.com",
+        "https://mattstewart.net",
+        "https://mmolinaonline.com",
+        "https://mofangyule123.com",
+        "https://mojoro.ch",
+        "https://mojose.ru",
+        "https://moqate.com",
+        "https://morrisonmaierle.biz",
+        "https://moveyourmountains.org",
+        "https://mueller-essingen.de",
+        "https://nadine-muelhauser.ch",
+        "https://nauticalalmanac.net",
+        "https://neongenesis.us",
+        "https://netgate.co.za",
+        "https://ngaquoc.com",
+        "https://nias.cc",
+        "https://niceandhealthy.com.mx",
+        "https://nicholasjarnold.com",
+        "https://njd-studio.com",
+        "https://nkygeezers.com",
+        "https://nsworx.net",
+        "https://openinnovation.au",
+        "https://optometrynepal.org.np",
+        "https://orsiitaliani.com",
+        "https://orthotuth.org.np",
+        "https://paranoia.mobi",
+        "https://pixtures.ar",
+        "https://pragti.ch",
+        "https://prepl.net",
+        "https://propertypreview.au",
+        "https://prsharma.com.np",
+        "https://ravenx.com.br",
+        "https://reptoncourt.co.uk",
+        "https://richardpinney.net",
+        "https://rightlife.ru",
+        "https://royernet.net",
+        "https://saysme.io",
+        "https://sdzlan.com",
+        "https://shawnleahey.com",
+        "https://sheltiezuchtschweiz.ch",
+        "https://shenzhou-yule.com",
+        "https://sieradawn.com",
+        "https://sikkerhets.info",
+        "https://simanovicki.net",
+        "https://skimmilkfarm.org",
+        "https://smart-k.biz",
+        "https://snixel.net",
+        "https://sophielewis.name",
+        "https://steuerlexikon.net",
+        "https://strykr.net",
+        "https://sugengrahayubus.com",
+        "https://svenskasnacks.se",
+        "https://t-marks-home.com",
+        "https://roadsfamily.co.uk",
+        "https://rubuspi.org",
+        "https://ryanmartinneutrino.com",
+        "https://safelinux.org",
+        "https://schnyder-markierungen.ch",
+        "https://scpt-nms.com",
+        "https://shenbo-yule.com",
+        "https://shendianyule.com",
+        "https://shendianyuleol.com",
+        "https://sikkerhets.guru",
+        "https://sikkerhets.ninja",
+        "https://smudgelang.org",
+        "https://snapoffer.com",
+        "https://sorteosweb.com.mx",
+        "https://sorteosweb.mx",
+        "https://ssu.mx",
+        "https://stasta.org",
+        "https://statul-paralel.ro",
+        "https://stripzona.com",
+        "https://systems-programmer.pro",
+        "https://t3b9.me",
+        "https://tablero-anmac.ar",
+        "https://tahuri.ar",
+        "https://taiyangcheng123.com",
+        "https://takemonitor.cl",
+        "https://task-toaster.com",
+        "https://teleconsultusa.net",
+        "https://tenglongyule666.com",
+        "https://tgfields.ro",
+        "https://thebaldgeek.net",
+        "https://thejoneseffect.com",
+        "https://thenewlifeguide.com",
+        "https://thirdheavenranch.org",
+        "https://tokiotechnologies.com",
+        "https://totalvideogamer.com",
+        "https://totobgoode.com",
+        "https://tuitionplus.sg",
+        "https://tulancingo.net",
+        "https://ucronradio.com",
+        "https://unser-taro.at",
+        "https://varshets.com",
+        "https://varshets.net",
+        "https://vone.sk",
+        "https://wafflesplex.com",
+        "https://wander-away.com",
+        "https://warezromania.net",
+        "https://webbup.com",
+        "https://weinisirenyule123.com",
+        "https://wendingyouxi.com",
+        "https://wildbereis.ru",
+        "https://wimax.com.mx",
+        "https://worldoflighting.co.za",
+        "https://wrinklyfart.co.uk",
+        "https://xemaylocngan.com",
+        "https://xigua-yule.com",
+        "https://xingcai-yule.com",
+        "https://xingfayule666.com",
+        "https://xingguang-yule.com",
+        "https://xingkong-yule.com",
+        "https://xinpujing-yule.com",
+        "https://xinpujingyule666.com",
+        "https://xyazo.com",
+        "https://yaojiyule666.com",
+        "https://yongli-yule.com",
+        "https://yongliyule123.com",
+        "https://yunding-yule.com",
+        "https://zhongfayule.com",
+        "https://zhuiguang-yule.com",
+        "https://2apstrong.com",
+        "https://3030cc.org",
+        "https://3621tianting.com",
+        "https://420030.xyz",
+        "https://58-yule.com",
+        "https://aa842.jp",
+        "https://aigreatfalls.com",
+        "https://atemtherapieausbildung-bern.ch",
+        "https://atmospherenetworks.com",
+        "https://auricus.ca",
+        "https://ayres-comunica.com.ar",
+        "https://baoshi-yule.com",
+        "https://baranyos.hu",
+        "https://bdsmf.tk",
+        "https://benchibaomayule.com",
+        "https://birdinternet.ca",
+        "https://blackcreekbrewery.com",
+        "https://blancsablon.ca",
+        "https://broker33.ru",
+        "https://c-r-avto.ru",
+        "https://caml.ai",
+        "https://chaofanyule123.com",
+        "https://chloecole.co.uk",
+        "https://cliftsol.com",
+        "https://congresoja.cl",
+        "https://currant.cl",
+        "https://ddns.homelabs.io",
+        "https://deadplanetgames.com",
+        "https://devils.ar",
+        "https://dingfengyule.com",
+        "https://drkether.com",
+        "https://educa21.com"
+      ];
+
+      const PING_TIMEOUT_MS = 8000; // wait this long for a postMessage reply
+      const grid = document.getElementById("grid");
+
+      // map a frame -> metadata to validate incoming messages
+      const framesMeta = new WeakMap();
+
+      // globally handle incoming messages from iframes
+      window.addEventListener("message", (event) => {
+        // event.source is the Window object of sender
+        // find which frame corresponds to the source
+        for (const [frameEl, meta] of iterFramesMeta()) {
+          if (event.source === frameEl.contentWindow) {
+            // validate origin — the handshake expects the iframe's origin
+            if (event.origin !== meta.origin) {
+              // origin mismatch: ignore
+              console.warn(
+                "Ignoring message: origin mismatch",
+                event.origin,
+                meta.origin
+              );
+              return;
+            }
+            // attempt parsing
+            try {
+              const msg =
+                typeof event.data === "object"
+                  ? event.data
+                  : JSON.parse(event.data);
+              if (
+                msg &&
+                msg.type === "iframe-pong" &&
+                msg.token === meta.token
+              ) {
+                markAs(frameEl, "cooperating", "Cooperating (postMessage OK)");
+                // cancel timeout if any
+                clearTimeout(meta.timeoutId);
+              }
+            } catch (err) {
+              // ignore non-JSON or unexpected messages
+            }
+          }
+        }
+      });
+
+      // small helper to iterate WeakMap (no direct iterator), so we keep refs in an array too
+      const frameRefs = [];
+      function iterFramesMeta() {
+        return frameRefs.map((f) => [f, framesMeta.get(f)]);
+      }
+
+      function markAs(frameEl, statusKey, text) {
+        const meta = framesMeta.get(frameEl);
+        if (!meta) return;
+        meta.statusEl.className =
+          "status " +
+          (statusKey === "loading"
+            ? "loading"
+            : statusKey === "loaded"
+            ? "loaded"
+            : statusKey === "blocked"
+            ? "blocked"
+            : "nomsg");
+        meta.statusEl.textContent = text;
+      }
+
+      // create each card + iframe
+      urls.forEach((raw) => {
+        let origin;
+        try {
+          origin = new URL(raw).origin;
+        } catch (e) {
+          origin = "*";
+        }
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const top = document.createElement("div");
+        top.className = "meta";
+
+        const link = document.createElement("a");
+        link.href = raw;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.className = "site";
+        link.textContent = raw.replace(/^https?:\/\//, "");
+
+        const statusEl = document.createElement("div");
+        statusEl.className = "status loading";
+        statusEl.textContent = "Loading...";
+
+        top.appendChild(link);
+        top.appendChild(statusEl);
+        card.appendChild(top);
+
+        const frame = document.createElement("iframe");
+
+        // === IMPORTANT: sandbox & allow attributes ===
+        // Do NOT use allow="camera; microphone" etc unless explicitly needed.
+        // We keep the iframe sandboxed so it has minimal privileges.
+        // "allow-scripts" lets embedded pages run JS, but they still cannot navigate parent or bypass protections.
+        // We intentionally DO NOT include "allow-same-origin" (more secure).
+        frame.setAttribute("sandbox", "allow-scripts allow-forms");
+        frame.setAttribute("referrerpolicy", "no-referrer"); // reduce referrer leakage when possible
+        frame.setAttribute("loading", "lazy"); // good for many iframes
+
+        // set src last so that listeners can be set up before loading begins
+        // but for cross-origin if the target site prevents framing, behavior differs across browsers.
+        frame.src = raw;
+
+        card.appendChild(frame);
+
+        // controls (open in new tab / reload)
+        const controls = document.createElement("div");
+        controls.className = "controls";
+        const openBtn = document.createElement("button");
+        openBtn.textContent = "Open";
+        openBtn.title = "Open site in new tab";
+        openBtn.onclick = () => window.open(raw, "_blank", "noopener");
+
+        const reloadBtn = document.createElement("button");
+        reloadBtn.textContent = "Reload";
+        reloadBtn.onclick = () => {
+          markAs(frame, "loading", "Reloading...");
+          try {
+            frame.contentWindow.location.reload();
+          } catch (_) {
+            frame.src = raw;
+          } // fallback
+        };
+
+        controls.appendChild(openBtn);
+        controls.appendChild(reloadBtn);
+        card.appendChild(controls);
+
+        // append to grid
+        grid.appendChild(card);
+
+        // set metadata for this frame
+        const token = Math.random().toString(36).slice(2, 12); // short random token for handshake
+        framesMeta.set(frame, {
+          origin,
+          token,
+          statusEl,
+          timeoutId: null,
+        });
+        frameRefs.push(frame);
+
+        // detect load event
+        let loaded = false;
+        frame.addEventListener("load", () => {
+          loaded = true;
+          // first mark as loaded (frame loaded something)
+          markAs(frame, "loaded", "Loaded (no messaging yet)");
+          // attempt messaging handshake after small delay to allow the iframe JS to set up a listener
+          setTimeout(() => handshakeWith(frame), 150);
+        });
+
+        // some browsers don't fire error for frames blocked by X-Frame-Options; we use a timeout fallback
+        const blockDetectTimeout = setTimeout(() => {
+          if (!loaded) {
+            // still not loaded — likely blocked
+            markAs(frame, "blocked", "Blocked or timed out (could not load)");
+          }
+        }, 6000);
+
+        function handshakeWith(frameEl) {
+          const meta = framesMeta.get(frameEl);
+          if (!meta) return;
+          // If the frame is same-origin and accessible, we could read more; but we keep this path generic.
+          try {
+            // send a structured object; many frames will ignore if they don't expect it
+            const payload = {
+              type: "iframe-ping",
+              token: meta.token,
+              ts: Date.now(),
+            };
+            // Use origin if known, else '*' if URL parsing failed
+            const targetOrigin = meta.origin === "*" ? "*" : meta.origin;
+            frameEl.contentWindow.postMessage(payload, targetOrigin);
+          } catch (err) {
+            // If posting messages fails (rare), just mark as nominally loaded
+            console.warn("postMessage failed", err);
+          }
+
+          // set a timeout — if the iframe cooperates it should reply with a matching token
+          // cooperating iframe should reply with {type:'iframe-pong', token: same}
+          meta.timeoutId = setTimeout(() => {
+            // no reply in time — leave status as "loaded but no messaging"
+            // but avoid overwriting a cooperating mark if it arrived just now
+            const cur = framesMeta.get(frameEl);
+            if (!cur) return;
+            // if current status text starts with "Cooperating" leave it
+            if (
+              cur.statusEl.textContent &&
+              cur.statusEl.textContent.startsWith("Cooperating")
+            )
+              return;
+            markAs(frameEl, "nomsg", "Loaded — no messaging support");
+          }, PING_TIMEOUT_MS);
+        }
+      });
+
+      // OPTIONAL: a small utility to list frames and their state (for debugging)
+      // Uncomment to print to console periodically:
+      // setInterval(() => {
+      //   console.table(iterFramesMeta().map(([f, m]) => ({src: f.src, status: m.statusEl.textContent, origin: m.origin})));
+      // }, 5000);
+    </script>
   </body>
 </html>
