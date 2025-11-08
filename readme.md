@@ -63,6 +63,6 @@ npm start
 ## Credits
 
 - [Chemical.js](https://github.com/chemicaljs/chemical)
-- [Discord Server](https://discord.gg/xM8FvSAttG)
+- [Discord Server](https://discord.com/invite/Dvh2veTWU4)
 - [Icons](https://github.com/ionic-team/ionicons)
 - [da best dev ever](https://github.com/r480github)
