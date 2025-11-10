@@ -7,7 +7,7 @@ const [app, listen] = new ChemicalServer({
     scramjet: "true",
     rh: "false",
 });
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // --- Allow Caddy to issue TLS for all domains ---
 app.get("/allow", (req, res) => {
