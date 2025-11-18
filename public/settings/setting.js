@@ -5,7 +5,7 @@ try {
   inIframe = true;
 }
 const educationalSites = [
-  "https://drakerecitalpraised.com/rpcghdc1?key=467d3e6001045bfb8860f44a30d2d18c",
+  "https://lightingshovestature.com/rpcghdc1?key=467d3e6001045bfb8860f44a30d2d18c",
 ];
 
 function ABCloak(redirectToEducationalSite) {
