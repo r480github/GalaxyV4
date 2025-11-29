@@ -1,71 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" href="" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../global/css/fonts.css" />
-    <script src="settings/setting.js"></script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-MXG0KPC43X"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-MXG0KPC43X");
-  </script>
-
-  <body>
-    <section class="controls">
-      <button class="back web" onclick="back()">Back</button>
-      <button class="forward web" onclick="forward()">Forward</button>
-      <button class="reload web" onclick="reload()">Reload</button>
-      <button class="close web" onclick="window.location.href='/g';">
-        Close
-      </button>
-    </section>
-    <iframe src="" frameborder="0" id="game"></iframe>
-    <script>
-      var savedURL = localStorage.getItem("gameload");
-      if (savedURL) {
-        var iframe = document.getElementById("game");
-        iframe.src = savedURL;
-      }
-    </script>
-    <script>
-      function reload() {
-        const frame = document.getElementById("game");
-        frame.contentWindow.location.reload();
-      }
-
-      function back() {
-        const frame = document.getElementById("game");
-        frame.contentWindow.history.back();
-      }
-
-      function forward() {
-        const frame = document.getElementById("game");
-        frame.contentWindow.history.forward();
-      }
-    </script>
-    <script>
-      function inspect() {
-        var script = document.createElement("script");
-        script.src = "/global/js/eruda.js";
-        document.body.append(script);
-        script.onload = function () {
-          eruda.init();
-        };
-      }
-      inspect();
-    </script>
-  </body>
-</html>
+<h1>This is gonna be a sad week for the unemployed...</h1>
+<h2>I ran out of bandwidth and I'm too broke to get more</h2> 
+so if someone wants to paypal me, dm rogo7070 on DC <br />
+otherwise you'll have to wait till dec. 2nd <br />
+<button
+  onclick="  window.open('https://lightingshovestature.com/rpcghdc1?key=467d3e6001045bfb8860f44a30d2d18c', '_blank');"
+>In the meantime, you can click on this ad so I can start hosting again
+</button>
