@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="/global/css/fonts.css" />
     <link rel="stylesheet" href="/global/css/nav.css" />
     <script src="/settings/setting.js"></script>
-    <script src="/chemical.js"></script>
-    <script src="/chemical.components.js"></script>
-    <script src="/chemical.cloaking.js"></script>
     <script src="/global/js/Swup.umd.js"></script>
     <script src="/global/js/swup.js"></script>
     <script src="/global/js/script.js"></script>
@@ -179,7 +176,6 @@
           >Discord</span
         >
       </p>
-      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
       <script src="/global/js/nav.js"></script>
       <input
         spellcheck="false"
@@ -192,7 +188,6 @@
         is="chemical-input"
         class="gameSearchinput"
       />
-      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
       <button
         style="opacity: 0"
         data-for="search"
@@ -201,18 +196,6 @@
       >
         Go!
       </button>
-      <section id="controls" is="chemical-controls">
-        <button onclick="chemical.componentAction('back', 'web')">Back</button>
-        <button onclick="chemical.componentAction('forward', 'web')">
-          Forward
-        </button>
-        <button onclick="chemical.componentAction('reload', 'web')">
-          Reload
-        </button>
-        <button onclick="chemical.componentAction('close', 'web')">
-          Close
-        </button>
-      </section>
     </main>
     <script src="/global/js/script.js"></script>
     <!-- GSAP -->
